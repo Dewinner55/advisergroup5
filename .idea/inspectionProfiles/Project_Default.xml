@@ -1,0 +1,49 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="li" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="groups.models.Student.objects" />
+          <option value="main.models.Task.objects" />
+          <option value="main.models.Task.object" />
+          <option value="social_network_app.models.User.objects" />
+          <option value="category.models.Category.objects" />
+          <option value="post.models.Post.objects" />
+          <option value="comment.models.Comments.objects" />
+          <option value="app.product.models.Product.objects" />
+          <option value="app.product.models.Продукты.objects" />
+          <option value="rest_framework.authtoken.models.Token.objects" />
+          <option value="rest_framework_simplejwt.tokens.RefreshToken.revoke" />
+          <option value="ApartmentsRating.models.ApartmentsRating.objects" />
+          <option value="ApartmentsRating.models.ApartmentsRating.DoesNotExist" />
+          <option value="Apartment.models.Apartment.objects" />
+          <option value="booking.models.Booking.objects" />
+          <option value="booking.models.Booking.DoesNotExist" />
+          <option value="order.models.Order.id" />
+          <option value="order.models.Order.objects" />
+          <option value="order.models.OrderItem.objects" />
+          <option value="SVEN.models.Company.objects" />
+          <option value="SVEN.models.Service.objects" />
+          <option value="SVEN.models.Contact.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

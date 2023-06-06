@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="путь_к_файлу_jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="//s.siteapi.org/frontend/static/grid_12/css/contacts.1895db.min.css" rel="stylesheet" type="text/css" />
+   <link href="//s.siteapi.org/frontend/static/grid_12/css/socnets.d744b7.min.css" rel="stylesheet" type="text/css" />
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Моя компания - Лучшие товары и услуги в Интернете</title>
+
+  <style>
+    svg {
+      display: none;
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.cdnfonts.com/" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+  <style type="text/css">
+    :root {
+      --fallback-font-header: "";
+      --fallback-font-paragraph: ""
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: local('Montserrat'), url('https://fonts.cdnfonts.com/s/14883/Montserrat-Medium.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: italic;
+      font-weight: 500;
+      font-display: swap;
+      src: local('Montserrat'), url('https://fonts.cdnfonts.com/s/14883/Montserrat-MediumItalic.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: local('Montserrat'), url('https://fonts.cdnfonts.com/s/14883/Montserrat-Black.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: italic;
+      font-weight: 900;
+      font-display: swap;
+      src: local('Montserrat'), url('https://fonts.cdnfonts.com/s/14883/Montserrat-BlackItalic.woff') format('woff');
+    }
+  </style>
+
+  <link href="//s.siteapi.org/frontend/static/grid_12/css/layouts.d730af.min.css" rel="stylesheet" type="text/css" />
+
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic&subset=latin,cyrillic-ext,latin-ext,cyrillic" rel="stylesheet">
+
+  <link rel="canonical" href="https://avisergroup999.nethouse.ru/">
+
+  <style type="text/css">
+      /* Пользовательские CSS переменные */
+
+    :root {
+      /* Кнопки */
+      /* Цвет текста для кнопок по умолчанию (#FFFFFF - белый) */
+      --button-default-color: #FFFFFF;
+      /* Фоновый цвет для кнопок по умолчанию (#2176FF - синий) */
+      --button-default-bg-color: #2176FF;
+      /* Цвет границы для кнопок по умолчанию (#2176FF - синий) */
+      --button-default-border-color: #2176FF;
+      /* Цвет текста для кнопок при наведении (#FFFFFF - белый) */
+      --button-default-color-hover: #FFFFFF;
+      /* Фоновый цвет для кнопок при наведении (#106CFF - голубой) */
+      --button-default-bg-color-hover: #106CFF;
+      /* Цвет границы для кнопок при наведении (#106CFF - голубой) */
+      --button-default-border-color-hover: #106CFF;
+      /* Цвет текста для активных кнопок (#BCC4D5 - серый) */
+      --button-default-color-active: #BCC4D5;
+      /* Фоновый цвет для активных кнопок (#0061FE - темно-синий) */
+      --button-default-bg-color-active: #0061FE;
+      /* Цвет границы для активных кнопок (#0061FE - темно-синий) */
+      --button-default-border-color-active: #0061FE;
+      /* Радиус границы для маленьких кнопок */
+      --button-default-radius-small: var(--button-radius-small-1);
+      /* Радиус границы для средних кнопок */
+      --button-default-radius-medium: var(--button-radius-medium-1);
+      /* Радиус границы для больших кнопок */
+      --button-default-radius-large: var(--button-radius-large-1);
+      /* Границы кнопок */
+      /* Цвет текста для границ кнопок (#11151C - черный) */
+      --button-bordered-color: #11151C;
+      /* Фоновый цвет для границ кнопок (#0CF574 - зеленый) */
+      --button-bordered-bg-color: #0CF574;
+      /* Цвет границы для границ кнопок (#0CF574 - зеленый) */
+      --button-bordered-border-color: #0CF574;
+      /* Цвет текста для границ кнопок при наведении (#000000 - черный) */
+      --button-bordered-color-hover: #000000;
+      /* Фоновый цвет для границ кнопок при наведении (#2DF687 - светло-зеленый) */
+      --button-bordered-bg-color-hover: #2DF687;
+      /* Цвет границы для границ кнопок при наведении (#2DF687 - светло-зеленый) */
+      --button-bordered-border-color-hover: #2DF687;
+      /* Цвет текста для активных границ кнопок (#000000 - черный) */
+      --button-bordered-color-active: #000000;
+      /* Фоновый цвет для активных границ кнопок (#4DF899 - ярко-зеленый) */
+      --button-bordered-bg-color-active: #4DF899;
+      /* Цвет границы для активных границ кнопок (#4DF899 - ярко-зеленый) */
+      --button-bordered-border-color-active: #4DF899;
+      --menu-logo-width: 215px;
+      --menu-vertical-align: center;
+      --menu-links-underline-on-hover: 1;
+      --menu-sticky: sticky;
+      --menu-font-size: 0.75rem;
+      --menu-width: 84.5rem;
+      --menu-bg-blur: blur(5px);
+      --menu-color: #BCC4D5;
+      --menu-color-hover: #0CF574;
+      --menu-bg-color: rgba(17, 21, 28, 0.9);
+      --menu-bg-color-solid: #11151C;
+      --header-color: #F9EBE0;
+    }
+  </style>
+
+  <link href="images/favicon.ico" rel="shortcut icon">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  <link href="css/tobii.min.css" rel="stylesheet" type="text/css">
+  <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+  <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" type="text/css" id="theme-opt">
+  <style type="text/css" id="#jarallax-clip-0">#jarallax-container-0 {
+   clip: rect(0 826px 910px 0);
+   clip: rect(0, 826px, 910px, 0);
+}</style>
+  <style type="text/css" id="#jarallax-clip-1">#jarallax-container-1 {
+   clip: rect(0 826px 378px 0);
+   clip: rect(0, 826px, 378px, 0);
+}</style>
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.69JJaQ5G5xA.L.W.O/d=0/rs=AN8SPfpC36MIoWPngdVwZ4RUzeJYZaC7rg/m=el_main_css">
+
+  <style>
+  .socnets__icon1 svg {
+  margin-left: 100px;
+    width: 34px;
+    height: 34px;
+  }
+
+    .socnets__icon2 svg {
+  margin-left: 50px;
+    width: 34px;
+    height: 34px;
+  }
+</style>
+
+</head>
+
+<body id="top-body" data-page-type="index" class="site site_main-page " data-html-version="1" data-grid="1" data-ng-controller="BlocksController as blockCtrl" data-ng-init="moduleId = 1" data-lang="ru_RU" style="background: ;">
+
+  <div class="site__layout">
+    <div id="container" class="site-container module main-page-module main-page-module_no-slider">
+
+
+      <header class="site-header js-sticky__header small-12">
+        <div class="site-header__wrapper">
+          <div class="site-header__content">
+            <div class="site-header__top-contacts">
+              <link href="//s.siteapi.org/frontend/static/grid_12/css/topContacts.e1fef2.min.css" rel="stylesheet" type="text/css" />
+              <section id="topcontacts" data-block-id="3" data-ng-init="init(3)" data-ng-controller="TopContactsController" class="block-3 widget widget-block -nt-widget top-contacts nh-editor-panel" data-ng-class="{'on-view': !blocks[3].isEdit, 'edit-item': blocks[3].editItem}">
+                <div class="top-contacts__inner">
+                  <div data-ng-show="!blocks[3].isEdit" class="content-block" id="topcontacts-show">
+                    <div class="top-contacts -inline-group js-top-contacts">
+                      <div class="-inline-group top-contacts__phones" style="padding-left: 30px;">
+                        <div class="top-contacts__phones-list show-for-medium js-top-contacts__phones">
+                          <div class="desktop -inline-group">
+                              <div class="top-contacts__icon top-contacts__icon_phone js-top-contacts__phone top-contacts--hover">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                                  <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                                  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg><a class="top-contacts__phones-item phone-number js-phone-number__781200000000" href="tel:+781200000000">+996 500 202 263</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="top-contacts__forms">
+                        <div class="row -inline-group text-right">
+                          <div class="feedback inline-column top-contacts__form">
+                            <a href="#feedback" class="top-contacts__link feedback-btn -inline-group" data-type="0">
+                              <div class="top-contacts__icon top-contacts__icon_form">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                  <defs/>
+                                  <path fill="currentColor" fill-rule="evenodd" d="M2 2h12a2 2 0 012 2v8a2 2 0 01-2 2H2a2 2 0 01-2-2V4c0-1.1.9-2 2-2zm0 5v5h12V6.9L8 10 2 7zm0-2l6 3 6-3V4H2v1z" clip-rule="evenodd" />
+                                </svg>
+                              </div>
+                              <span class="show-for-medium top-contacts__form-text">Напишите нам</span>
+                            </a>
+                          </div>
+                          <div class="feedback inline-column top-contacts__form">
+                            <a href="#sviaz" class="top-contacts__link feedback-btn -inline-group" data-type="1">
+                              <div class="top-contacts__icon top-contacts__icon_form">
+                                <svg id="callback_icon" width="50" height="50" data-name="callback icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15">
+                                  <title>callback_icon</title>
+                                  <path fill="currentColor" d="M17.88,1.5a10.32,10.32,0,0,0-1-1A1.45,1.45,0,0,0,16,0a2,2,0,0,0-1,.48,7.38,7.38,0,0,0-1.22,1.14A5.06,5.06,0,0,0,12.91,3,0.89,0.89,0,0,0,13,4a4.35,4.35,0,0,0,1.38,1A1,1,0,0,1,15,6a2.35,2.35,0,0,1-.62,1.5Q13.75,8.25,13,9t-1.5,1.38A2.35,2.35,0,0,1,10,11a1,1,0,0,1-1-.63A4.35,4.35,0,0,0,8,9a0.89,0.89,0,0,0-1-.09,5.06,5.06,0,0,0-1.33.84A7.37,7.37,0,0,0,4.48,11,2,2,0,0,0,4,12a1.45,1.45,0,0,0,.47.89,10.36,10.36,0,0,0,1,1Q6.06,14.34,7,15a6,6,0,0,0,1.82-.35,16.1,16.1,0,0,0,2.2-.92,19.94,19.94,0,0,0,2.19-1.28A12,12,0,0,0,15,11a12.05,12.05,0,0,0,1.45-1.79A20,20,0,0,0,17.73,7a16,16,0,0,0,.92-2.2A6,6,0,0,0,19,3Q18.34,2.06,17.88,1.5ZM6,6L9,3,6,0V2H1V4H6V6Z" transform="translate(-1)" />
+                                </svg>
+                              </div>
+                              <span class="show-for-medium top-contacts__form-text">Обратный звонок</span>
+                            </a>
+                          </div>
+                          <div class="feedback inline-column top-contacts__form top-contacts_scroll-up">
+                            <div class="top-contacts__icon js-scroll-up hide-for-medium">
+                              <?xml version="1.0" encoding="utf-8"?>
+
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="768" viewBox="0 0 768 768">
+                                  <path d="M384 256.5l192 192-45 45-147-147-147 147-45-45z">
+
+                                  </path>
+                                </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="site-header__bottom-section js-combo-box" combo-box="menu">
+              <div class="site-header-bottom site-header__inner">
+                <div class="site-header__logo small-8 large-3">
+                  <div class="site-header__container">
+                    <div class="hide-for-large site-header__icon-width">
+                      <button class="site-header__menu-btn svg-icon js-combo-box__button_menu" data-toggle="site-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <defs/>
+                          <path fill-rule="evenodd" d="M2 5C2 4.44772 2.44772 4 3 4H21C21.5523 4 22 4.44772 22 5C22 5.55228 21.5523 6 21 6H3C2.44772 6 2 5.55228 2 5ZM2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12ZM3 18C2.44772 18 2 18.4477 2 19C2 19.5523 2.44772 20 3 20H21C21.5523 20 22 19.5523 22 19C22 18.4477 21.5523 18 21 18H3Z" clip-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="small-10 medium-11 large-12 site-header__img-container">
+                      <link href="//s.siteapi.org/frontend/static/grid_12/css/widget-logo.8a74c8.min.css" rel="stylesheet" type="text/css">
+                      <section id="company-logo" class="block-1 widget-block widget-logo nh-editor-panel">
+                        <div id="site-logo" class="widget-logo__image">
+                          <a href="">
+                            <img src="https://i.imgur.com/9iBLh8G.png" alt="Логотип" style="">
+                          </a>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+                <div class="site-header__manage small-4 large-9">
+                  <div class="site-header__flex-container">
+                    <div class="menu-cart-wrapper nh-editor-panel nh-editor-panel_main-menu js-editor-panel -relative">
+                      <link href="//s.siteapi.org/frontend/static/grid_12/css/site-menu.40cbe7.min.css" rel="stylesheet" type="text/css">
+                      <div class="js-combo-box__content_menu combo-box__content combo-box__content_invert large-12">
+                        <div class="combo-box__header">
+                          <div class="combo-box__title">Меню</div>
+                          <div class="combo-box__close js-combo-box__close_menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                              <defs/>
+                              <path d="M10.8 12.2L3 20l1.4 1.4 7.8-7.8 7.8 7.8 1.4-1.4-7.8-7.8 7.8-7.8L20 3l-7.8 7.8L4.4 3 3 4.4l7.8 7.8z" />
+                            </svg>
+                          </div>
+                        </div>
+                        <nav id="main-menu" class="site-menu">
+                          <div>
+                            <ul class="no-bullet site-menu__list clearfix">
+
+                              </li>
+                              <li id="lnk-2" data-sort="1" class="site-menu__item" data-label="О компании">
+                                <a href="#about" style="">О компании</a>
+                              </li>
+                              <li id="lnk-3" data-sort="2" class="site-menu__item" data-label="Каталог товаров">
+                                <a href="#uslugi" style="">Услуги</a>
+                              </li>
+                              <li id="lnk-4" data-sort="3" class="site-menu__item" data-label="Услуги">
+                                <a href="#sviaz" style="">Связаться</a>
+                              </li>
+                              </li>
+                              <li id="lnk-6" data-sort="5" class="site-menu__item" data-label="Контакты">
+                                <a href="#contact" style="">Контакты</a>
+                              </li>
+                              <a target="_blank" class="socnets__icon1" rel="nofollow" href="https://wa.me/WhatsApp">
+                <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20.52 3.449c-2.28-2.204-5.28-3.449-8.475-3.449-9.17 0-14.928 9.935-10.349 17.838l-1.696 6.162 6.335-1.652c2.76 1.491 5.021 1.359 5.716 1.447 10.633 0 15.926-12.864 8.454-20.307z" fill="#eceff1"/><path d="m12.067 21.751-.006-.001h-.016c-3.182 0-5.215-1.507-5.415-1.594l-3.75.975 1.005-3.645-.239-.375c-.99-1.576-1.516-3.391-1.516-5.26 0-8.793 10.745-13.19 16.963-6.975 6.203 6.15 1.848 16.875-7.026 16.875z" fill="#4caf50"/><path d="m17.507 14.307-.009.075c-.301-.15-1.767-.867-2.04-.966-.613-.227-.44-.036-1.617 1.312-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.293-.506.32-.578.878-1.634.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.576-.05-.997-.042-1.368.344-1.614 1.774-1.207 3.604.174 5.55 2.714 3.552 4.16 4.206 6.804 5.114.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z" fill="#fafafa"/></svg>
+              </a>
+                              <a target="_blank" class="socnets__icon2" rel="nofollow" href="https://t.me/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                  <defs/>
+                  <path fill="currentColor" d="M28.93 6.98L25 25.48c-.3 1.31-1.07 1.64-2.16 1.02l-5.98-4.4-2.89 2.77c-.32.32-.58.59-1.2.59l.43-6.09L24.28 9.36c.48-.43-.1-.67-.75-.24l-13.7 8.63-5.9-1.85c-1.27-.4-1.3-1.28.28-1.9l23.06-8.88c1.07-.4 2 .23 1.66 1.87z" />
+                </svg>
+              </a>
+
+                            </ul>
+                          </div>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </header>
+
+      <div id="content-anchor" class="site-content small-12">
+        <div class="site-background" style="background-color: #5B40D7; background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;">
+
+        </div>
+      </div>
+
+        <section id="content" class="js-blocks-list" data-blocks-list data-ng-controller="ContentController">
+          <div class="js-sorted-blocks main-page-module__list module__list " data-sorted-blocks data-widget-store-list data-region="1" data-module="2">
+
+            <section data-widget-container
+         data-widget-id="13"
+         data-widget-name="carousel-fullscreen"
+         data-widget-type="100"
+         data-widget-url="/widget?route=widget&amp;on_main=0&amp;type=100&amp;widget_id=13&isCreate=1"
+		                   id="carousel-fullscreen-13"
+         class="nh-carousel-fullscreen  widget-sort
+         onmain on-view widget-block js-carousel-fullscreen nh-editor-panel js-indent">
+              <link href="//s.siteapi.org/frontend/static/grid_12/css/carousel-fullscreen.8184e6.min.css" rel="stylesheet" type="text/css"/>
+              <div data-widget-replaceable-content="13" class="lazyload" style="
+              background-position: top left;
+              background-repeat: repeat-x;
+              background-size: auto;
+              background-color: rgba(9,17,62, 1);">
+                <div data-ng-non-bindable class="content-block nh-carousel-fullscreen__content" id="carousel-fullscreen-show">
+                  <div class="splide splide-13 nh-carousel-fullscreen__container" data-splide='{ "type": "loop", "autoplay": false, "rewind": true, "rewindByDrag": true }'>
+                    <div class="splide__arrows nh-carousel-fullscreen__arrows splide__arrows--ltr"><button class="splide__arrow nh-carousel-fullscreen__arrow splide__arrow--prev nh-carousel-fullscreen__arrow--prev" type="button" aria-label="Previous slide" aria-controls="splide01-track"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="M27.7071 20.7071C28.0976 20.3166 28.0976 19.6834 27.7071 19.2929L23.7071 15.2929C23.3166 14.9024 22.6834 14.9024 22.2929 15.2929C21.9024 15.6834 21.9024 16.3166 22.2929 16.7071L24.5858 19H13C12.4477 19 12 19.4477 12 20C12 20.5523 12.4477 21 13 21H24.5858L22.2929 23.2929C21.9024 23.6834 21.9024 24.3166 22.2929 24.7071C22.6834 25.0976 23.3166 25.0976 23.7071 24.7071L27.7071 20.7071Z"></path></svg></button><button class="splide__arrow nh-carousel-fullscreen__arrow splide__arrow--next nh-carousel-fullscreen__arrow--next" type="button" aria-label="Go to first slide" aria-controls="splide01-track"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false"><path d="M27.7071 20.7071C28.0976 20.3166 28.0976 19.6834 27.7071 19.2929L23.7071 15.2929C23.3166 14.9024 22.6834 14.9024 22.2929 15.2929C21.9024 15.6834 21.9024 16.3166 22.2929 16.7071L24.5858 19H13C12.4477 19 12 19.4477 12 20C12 20.5523 12.4477 21 13 21H24.5858L22.2929 23.2929C21.9024 23.6834 21.9024 24.3166 22.2929 24.7071C22.6834 25.0976 23.3166 25.0976 23.7071 24.7071L27.7071 20.7071Z"></path></svg></button></div>
+                    <div class="small-12 column splide__track ">
+                      <ul class="splide__list nh-carousel-fullscreen__items">
+                        <li data-splide-interval="5000" data-slide-id="9" class="splide__slide nh-carousel-fullscreen__item  lazyload" style="
+                        background-position: top left;
+                        background-repeat: repeat-x;
+                        background-size: auto;
+                        background-color: rgba(49,79,159, 1);"
+                            data-bgset="//i.siteapi.org/m1VyMIN9GNCVQ6ntskRH-HSsVk0=/fit-in/2000x4000/center/top/filters:format(webp):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/k2y1skyngq8sg4sosso4ws0gcws0w0, //i.siteapi.org/d30Q7IXcpocbfJcPg5IkbHahpuo=/fit-in/4000x8000/center/top/filters:format(webp):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/k2y1skyngq8sg4sosso4ws0gcws0w0 2x">
+                          <div class="nh-carousel-fullscreen__item-wrapper">
+                            <figure class="nh-carousel-fullscreen__figure nh-carousel-fullscreen__inner
+                                         nh-carousel-fullscreen__figure--all nh-carousel-fullscreen__figure--reverse">
+                              <div class="nh-carousel-fullscreen__image-block">
+                                <picture class="nh-carousel-fullscreen__picture-container nh-carousel-fullscreen_round-2" style="                                        ">
+                                  <source media="(max-width: 767px)" srcset="//i.siteapi.org/gkoh7-SZ8mLWD7R1vV646C8CcK0=/fit-in/374x/filters:format(webp):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/8kndtkedkcsoo8g840wgg00gkgkosw 1x," type="image/webp">
+                                  <source media="(max-width: 767px)" srcset="//i.siteapi.org/9n_QbM8BxPlxKC-cJXlHy3p3W9M=/fit-in/374x/filters:format(png):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/8kndtkedkcsoo8g840wgg00gkgkosw 1x," type="image/png">
+                                  <source media="(min-width: 768px)" srcset="//i.siteapi.org/50yvdKBZxmGSbdJzXDvvc9nzo5Q=/fit-in/608x/filters:format(webp):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/8kndtkedkcsoo8g840wgg00gkgkosw 1x," type="image/webp">
+                                  <source media="(min-width: 768px)" srcset="//i.siteapi.org/CYxmdVKWFKFRrb0dK4A65nS8EzU=/fit-in/608x/filters:format(png):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/8kndtkedkcsoo8g840wgg00gkgkosw 1x," type="image/png"><img alt="Adviser Group" sizes="(max-width: 767px) 374px, (min-width: 768px) 608px" src="//i.siteapi.org/50yvdKBZxmGSbdJzXDvvc9nzo5Q=/fit-in/608x/filters:format(webp):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/8kndtkedkcsoo8g840wgg00gkgkosw" media="(-webkit-min-device-pixel-ratio: 1.5)" class=" nh-carousel-fullscreen_round-2"></picture>
+                              </div><div class="nh-carousel-fullscreen__info"><div class="nh-carousel-fullscreen__title nh-carousel-fullscreen__title--align-left"
+                                                        style="
+                                                                                                                    color: #FFF;
+                                                         ">
+														Adviser Group
+                                                    </div><figcaption class="nh-carousel-fullscreen__text nh-carousel-fullscreen__text--align-left" style="
+                                                                                                                    color: #ffffff;
+                                                                                                                                                                            text-align: left                                                        ">Adviser Group - ведущая юридическая фирма, расположенная в городе Бишкеке.
+                                                    </figcaption><a target="_parent" href="#sviaz" class="nh-carousel-fullscreen__btn nh-carousel-fullscreen__btn--secondary nh-carousel-fullscreen__btn--margin-0">Бесплатная консультация</a></div>
+                            </figure>
+                          </div>
+                        </li>
+                        <li data-splide-interval="5000" data-slide-id="12" class="splide__slide nh-carousel-fullscreen__item  lazyload" style="
+                        background-position: right;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-color: rgba(249,235,224, 1);"
+                            data-bgset="//i.siteapi.org/7EeXtuXxVLWnWRZmtrVONBth1c4=/fit-in/2000x4000/center/top/filters:format(webp):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/bing1lg5m8oc4c4kgoscws48gww8gs, //i.siteapi.org/qh35yWMAzfbULE2ildQQtW9wYbQ=/fit-in/4000x8000/center/top/filters:format(webp):no_upscale()/s2.sitea48gww8gs 2x">
+                          <div class="nh-carousel-fullscreen__item-wrapper">
+                            <figure class="nh-carousel-fullscreen__figure nh-carousel-fullscreen__inner
+                                         nh-carousel-fullscreen__figure--all">
+                              <div class="nh-carousel-fullscreen__image-block">
+                                <picture class="nh-carousel-fullscreen__picture-container nh-carousel-fullscreen_round-2" style="                                        ">
+                                  <source media="(max-width: 767px)" srcset="//i.siteapi.org/ZC7WPMVG55Uvymo4osF3SiLYYOk=/fit-in/374x/filters:format(webp):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/2mgpy8lvxles8oggk4gcgck40w8gks 1x," type="image/webp">
+                                  <source media="(max-width: 767px)" srcset="//i.siteapi.org/GhiYcEhuYF1unoVC3j30-3b6JUI=/fit-in/374x/filters:format(png):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/2mgpy8lvxles8oggk4gcgck40w8gks 1x," type="image/png">
+                                  <source media="(min-width: 768px)" srcset="//i.siteapi.org/9YqV7YPDAQK_d63YNOEOE_JBimU=/fit-in/608x/filters:format(webp):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/2mgpy8lvxles8oggk4gcgck40w8gks 1x," type="image/webp">
+                                  <source media="(min-width: 768px)" srcset="//i.siteapi.org/Wi0b_z5DBE9OXHYkwJwHngPPSQc=/fit-in/608x/filters:format(png):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/2mgpy8lvxles8oggk4gcgck40w8gks 1x," type="image/png"><img alt="Adviser Group" sizes="(max-width: 767px) 374px, (min-width: 768px) 608px" src="//i.siteapi.org/9YqV7YPDAQK_d63YNOEOE_JBimU=/fit-in/608x/filters:format(webp):no_upscale()/s2.siteapi.org/e4576e079b8b459/carousel-fullscreen/2mgpy8lvxles8oggk4gcgck40w8gks" media="(-webkit-min-device-pixel-ratio: 1.5)" class=" nh-carousel-fullscreen_round-2"></picture></div>
+                              <div class="nh-carousel-fullscreen__info" >
+                                <div class="nh-carousel-fullscreen__title nh-carousel-fullscreen__title--align-left" style="
+                                                                                                                    color: #11151C;
+                                                         ">
+														Adviser Group
+                                                    </div>
+                                <figcaption class="nh-carousel-fullscreen__text nh-carousel-fullscreen__text--align-left" style="
+                                                                                                                    color: #1E2430;
+                                                                                                                                                                            text-align: left                                                        ">Мы специализируемся на широком спектре юридических услуг, от корпоративного и коммерческого права <br/>до судебных разбирательств и разрешения споров.
+                                </figcaption><a target="_parent" href="#sviaz" class="nh-carousel-fullscreen__btn nh-carousel-fullscreen__btn--basic nh-carousel-fullscreen__btn--margin-0">Оставить заявку</a></div>
+                            </figure>
+                          </div>
+                        </li >
+                        <li data-splide-interval="5000" data-slide-id="11" class="splide__slide nh-carousel-fullscreen__item  lazyload" style="
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-color: rgba(91,64,215, 1);" >
+                          <div class="nh-carousel-fullscreen__item-wrapper">
+                            <figure class="nh-carousel-fullscreen__figure nh-carousel-fullscreen__inner
+                                         nh-carousel-fullscreen__figure--only-text nh-carousel-fullscreen__figure--hide-img">
+                              <div class="nh-carousel-fullscreen__image-block"></div><div class="nh-carousel-fullscreen__info">
+                              <div class="nh-carousel-fullscreen__info-container"><div class="nh-carousel-fullscreen__title nh-carousel-fullscreen__title--align-center" style="
+                                                                                                                    color: #ffffff;
+                                                         ">
+														Adviser Group
+                              </div><figcaption class="nh-carousel-fullscreen__text nh-carousel-fullscreen__text--align-center" style="
+                                                                                                                    color: #ffffff;
+                                                                                                                                                                            text-align: center                                                        ">Наша опытная команда юристов стремится предоставлять качественные
+                                <br />консультации и представлять интересы наших клиентов.
+                              </figcaption><a target="_parent" href="#uslugi" class="nh-carousel-fullscreen__btn nh-carousel-fullscreen__btn--secondary nh-carousel-fullscreen__btn--margin-1">Узнать больше</a></div>
+                            </div>
+                            </figure>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  document.addEventListener( 'DOMContentLoaded', function() {
+                    window.initFullscreenCarousel(13);
+                                    });
+                </script>
+              </div >
+            </section >
+
+<style>
+  .a {
+  background-color:red
+  width: 10px;
+    height: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;"
+
+
+  }
+</style>
+
+<div>
+  <div class="a" style="background-color:grey">
+    <div class="row widget__header services__header widget__header_underlined">
+      </div>
+</div>
+
+<section  id="uslugi">
+  <li   class="  lazyload" style="
+                        background-position: right;
+                        background-repeat: no-repeat;
+                        margin-bottom: 100px;
+                        background-size: auto;
+                        background-size: cover;
+                        width: calc(100%);
+                        background-color: rgba(255,255,255, 1);"
+
+
+  <div class="content-block widget__content widget__content_filled" id="desc-show" >
+    <div class="row widget__inner" data-ng-show="$ctrl.showContent()" >
+      <div class="small-12 column">
+        <div class="user-inner">
+          <div class="mr-block">
+            <div>
+
+              <div class="mrb-small-18 mrb-medium-18 mrb-col-index-0 mrb-large-18">
+                <div class="-gd-content mrb-block-index-0" style="padding: 0" >
+
+                </div>
+              </div>
+            </div>
+            <div class=" mrb-row__content -inline-group_top mrb-row-index-2" >
+              <div class="mrb-small-18 mrb-medium-18
+            mrb-col-index-0 mrb-large-18">
+                <div class="-gd-content mrb-block-index-0">
+                  <div class="user-inner">
+                    <p style="text-align: center;"><img src="https://s.siteapi.org/fabe43ac121424d/docs/a762f3f6371a5f3c256603f07aaa4397d57fe66b.png" alt="a762f3f6371a5f3c256603f07aaa4397d57fe66b.png (1170×42)" class=""></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mrb-row_imageAndText mrb-row__content -inline-group_top mrb-row-index-3" >
+              <div class="mrb-small-18 mrb-medium-6
+            mrb-col-index-0 mrb-large-7">
+                <div class="-gd-content mrb-block-index-0">
+                  <div class="mrb-image">
+                    <div style="text-align: center">
+                      <img src="//i.siteapi.org/6FJfg6DHOUISeWBB7qNgfbf_OAM=/fit-in/1400x1000/center/top/fabe43ac121424d.s.siteapi.org/img/3232c80e90433e618b1be5502b155db82a9d8c86.png">
+                    </div>
+                  </div>
+                </div>
+              </div><div class="mrb-small-18 mrb-medium-12
+            mrb-col-index-1 mrb-large-11">
+                <div class="-gd-content mrb-block-index-0" >
+                  <div class="user-inner">
+                    <p><span style="font-weight: bold; font-size: 20px; font-weight: bold;"><span style="color: #000000;">О КОМПАНИИ</span> <span style="color: #2e7aae;">Adviser </span><span style="color: #d4a209;">Group</span></span>
+                    </p>
+                    <p style="text-align: left;">
+                      <br>
+                    </p>
+                    <div>
+                      <p>Юридическая фирма «Adviser Group» была основана в XXXX г и объединила лидеров российской адвокатуры. Сегодня это одна из старейших и самых надежных юридических фирм XXXX и СНГ.</p>
+                      <p>
+                        <br>
+                      </p>
+                      <p>Специалисты компании оказывают полный комплекс юридических услуг как в секторе B2B, так и частным лицам в Кыргызстане. Широкая сеть международных партнеров позволяет квалифицированно решать вопросы клиентов во многих уголках мира.</p>
+                      <p>
+                        <br>
+                      </p>
+                      <p>Клиенты компании всегда могут рассчитывать на стабильное качество услуг и высокий уровень профессиональной ответственности.</p>
+                    </div>
+                    <br>
+                    <ul class="list-unstyled text-muted">
+                                    <li class="mb-1"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Оставляете заявку через сайт или по телефону</font></font></li>
+                                    <li class="mb-1"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Консультация и расчёт стоимости</font></font></li>
+                                    <li class="mb-1"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Подготовка документов и разработка стратегии</font></font></li>
+                                </ul>
+                    <br>
+                    <div class="d-inline-block">
+                                    <div class="pt-3 d-flex align-items-center border-top">
+                                        <i class="uil uil-envelope text-primary me-2 fs-1"></i>
+                                        <div class="content">
+                                            <p class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Нужна дополнительная помощь?</font></font></p>
+                                            <a href="" class="text-dark h6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Задайте нам свой вопрос</font></font></a>
+                                        </div>
+                                    </div>
+                                </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class=" mrb-row__content -inline-group_top mrb-row-index-4">
+              <div class="mrb-small-18 mrb-medium-18
+            mrb-col-index-0 mrb-large-18">
+                <div class="-gd-content mrb-block-index-0">
+                  <div class="user-inner">
+                    <p style="text-align: center;"><img src="https://s.siteapi.org/fabe43ac121424d/docs/a762f3f6371a5f3c256603f07aaa4397d57fe66b.png" alt="a762f3f6371a5f3c256603f07aaa4397d57fe66b.png (1170×42)" class=""></p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class=" mrb-row__content -inline-group_top mrb-row-index-5">
+              <div class="mrb-small-18 mrb-medium-18
+            mrb-col-index-0 mrb-large-18">
+                <div class="-gd-content mrb-block-index-0">
+                  <div id="mrb-triggers" class="mrb-triggers theme-default">
+                    <div class="bl-trigger-title user-inner">
+                      <p><span style="color: #000000; font-weight: bold; font-weight: bold;">СХЕМА РАБОТЫ</span></p>
+                    </div>
+                    <div class="bl-triggers-list bl-triggers_small bl-triggers_4">
+                      <div class="bl-trigger">
+                        <div class="blr-trigger-media link-empty">
+                          <div class="bl-trigger-img" style="background: url('//i.siteapi.org/CtMqdL6S3YbJg0tciiRWaFMg10k=/fit-in/1024x768/center/top/fabe43ac121424d.s.siteapi.org/img/5ccb52accc2bdd688016909e9fdcd049359ec6d4.png') center center no-repeat">
+                            <img src="//i.siteapi.org/CtMqdL6S3YbJg0tciiRWaFMg10k=/fit-in/1024x768/center/top/fabe43ac121424d.s.siteapi.org/img/5ccb52accc2bdd688016909e9fdcd049359ec6d4.png">
+                          </div>
+                        </div>
+                        <div class="bl-trigger-text user-inner hide-for-mrb-large">
+                          <p><span style="font-weight: bold; font-size: 19px; font-weight: bold;">Оставляете заявку через сайт или по телефону</span></p>
+                        </div>
+                      </div>
+                      <div class="bl-trigger">
+                        <div class="blr-trigger-media link-empty">
+                          <div class="bl-trigger-img" style="background: url('//i.siteapi.org/LuoS_wroPu0k7U4RW2xU7g5sx9M=/fit-in/1024x768/center/top/fabe43ac121424d.s.siteapi.org/img/a2487aa60935174dc166ca01d8ca7d0df75ff57a.png') center center no-repeat">
+                            <img src="//i.siteapi.org/LuoS_wroPu0k7U4RW2xU7g5sx9M=/fit-in/1024x768/center/top/fabe43ac121424d.s.siteapi.org/img/a2487aa60935174dc166ca01d8ca7d0df75ff57a.png">
+                          </div>
+                        </div>
+                        <div class="bl-trigger-text user-inner hide-for-mrb-large">
+                          <p><span style="font-weight: bold; font-weight: bold;"><span style="font-size: 19px;">Консультация и расчёт стоимости</span></span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bl-trigger">
+                        <div class="blr-trigger-media link-empty">
+                          <div class="bl-trigger-img" style="background: url('//i.siteapi.org/FweXVAZ-HLMImThQj7h_3IJQ-SI=/fit-in/1024x768/center/top/fabe43ac121424d.s.siteapi.org/img/7000e3356f83f7d8f3560130413e444123b6705f.png') center center no-repeat">
+                            <img src="//i.siteapi.org/FweXVAZ-HLMImThQj7h_3IJQ-SI=/fit-in/1024x768/center/top/fabe43ac121424d.s.siteapi.org/img/7000e3356f83f7d8f3560130413e444123b6705f.png">
+                          </div>
+                        </div>
+                        <div class="bl-trigger-text user-inner hide-for-mrb-large">
+                          <p><span style="font-weight: bold; font-weight: bold;"><span style="font-size: 19px;">Подготовка документов и разработка стратегии</span></span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bl-trigger">
+                        <div class="blr-trigger-media link-empty">
+                          <div class="bl-trigger-img" style="background: url('//i.siteapi.org/-iYVJFWb05cq-6mZbF5CMpUwQ5k=/fit-in/1024x768/center/top/fabe43ac121424d.s.siteapi.org/img/ea7a7a0c81d7cfc5e76ae80473a4ffe9aef97c7c.png') center center no-repeat">
+                            <img src="//i.siteapi.org/-iYVJFWb05cq-6mZbF5CMpUwQ5k=/fit-in/1024x768/center/top/fabe43ac121424d.s.siteapi.org/img/ea7a7a0c81d7cfc5e76ae80473a4ffe9aef97c7c.png">
+                          </div>
+                        </div>
+                        <div class="bl-trigger-text user-inner hide-for-mrb-large">
+                          <p><span style="font-weight: bold; font-weight: bold;"><span style="font-size: 19px;">Защита прав клиента в суде</span></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bl-triggers-list show-for-mrb-large bl-triggers_small bl-triggers_4">
+                      <div class="bl-trigger">
+                        <div class="bl-trigger-text user-inner">
+                          <p><span style="font-weight: bold; font-size: 19px; font-weight: bold;">Оставляете заявку через сайт или по телефону</span></p>
+                        </div>
+                      </div>
+                      <div class="bl-trigger">
+                        <div class="bl-trigger-text user-inner">
+                          <p><span style="font-weight: bold; font-weight: bold;"><span style="font-size: 19px;">Консультация и расчёт стоимости</span></span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bl-trigger">
+                        <div class="bl-trigger-text user-inner">
+                          <p><span style="font-weight: bold; font-weight: bold;"><span style="font-size: 19px;">Подготовка документов и разработка стратегии</span></span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="bl-trigger">
+                        <div class="bl-trigger-text user-inner">
+                          <p><span style="font-weight: bold; font-weight: bold;"><span style="font-size: 19px;">Защита прав клиента в суде</span></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+          </li>
+</section>
+
+
+
+<section data-widget-container data-widget-id="15" data-widget-name="cards" data-widget-type="89" data-widget-url="/widget?route=mainPage&amp;on_main=1&amp;type=89&amp;widget_id=15&route=widget" id="cards-15" class="nh-cards  widget-sort
+         onmain on-view widget-block nh-editor-panel lazyload  js-indent" >
+  <link href="//s.siteapi.org/frontend/static/grid_12/css/cards.2a54d5.min.css" rel="stylesheet" type="text/css" />
+  <div data-widget-replaceable-content="15" data-ng-non-bindable class="lazyload nh-cards--indent-top-l nh-cards--indent-bottom-m" style="
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgb(51, 51, 51);
+        background-image: url(&quot;;); background-position: center center; background-size: cover; content:">
+    <div class="js-indent-add" ></div>
+    <div class="nh-cards__inner">
+      <div class="nh-cards__content">
+
+        <ul class="nh-cards__items nh-cards_m nh-cards__items_1">
+          <li class="lazyload nh-cards__item nh-cards_without-padding nh-cards_round-2" style="
+          --shadow-rgba-color: rgba(0,1,1, 1);
+          --border-color: rgba(0,0,0, 1); --border-width: 1px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-color: rgba(111,111,1, 1);">
+            <div>
+              <figure >
+                <div class="nh-cards__picture-container ">
+                  <picture class="nh-cards__picture-container nh-cards_round-1 " style=" ">
+                    <source media="(max-width: 767px) " srcset="https://i.imgur.com/zfBWUVE.jpg" type="image/webp ">
+                    <source media="(max-width: 767px) " srcset="https://i.imgur.com/zfBWUVE.jpg" type="image/png ">
+                    <source media="(min-width: 768px) " srcset="https://i.imgur.com/zfBWUVE.jpg" type="image/webp ">
+                    <source media="(min-width: 768px) " srcset="https://i.imgur.com/zfBWUVE.jpg" type="image/png ">
+                    <img alt="Услуги адвоката"
+                     sizes="(max-width: 767px) 288px, (min-width: 768px) 313px "
+                     src="https://i.imgur.com/zfBWUVE.jpg"
+                     media="(-webkit-min-device-pixel-ratio: 1.5) "
+                     class=" nh-cards_round-1 ">
+                  </picture>
+                </div>
+                <div class="nh-cards__info ">
+                  <h4 class="nh-cards__title "style=" color: #ffffff; text-align: center ">Услуги адвоката</h4>
+                  <figcaption class="nh-cards__text" style=" color: #ffffff; text-align: center ">цена договорная</figcaption>
+                </div>
+              </figure>
+            </div>
+          </li>
+          <li class="lazyload nh-cards__item nh-cards_without-padding nh-cards_round-2 " style="
+          --shadow-rgba-color: rgba(0,0,1, 1);
+          --border-color: rgba(0,0,0, 1);
+          --border-width: 0px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-color: rgba(222,111,111, 1); ">
+            <div>
+              <figure>
+                <div class="nh-cards__picture-container">
+                  <picture class="nh-cards__picture-container nh-cards_round-1" style="                                        ">
+                    <source media="(max-width: 767px)" srcset="https://i.imgur.com/Lru3xgc.jpg" type="image/webp">
+                    <source media="(max-width: 767px)" srcset="https://i.imgur.com/Lru3xgc.jpg" type="image/png">
+                    <source media="(min-width: 768px)" srcset="https://i.imgur.com/Lru3xgc.jpg" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="https://i.imgur.com/Lru3xgc.jpg" type="image/png">
+                    <img alt="Вторая категория"
+                         sizes="(max-width: 767px) 288px, (min-width: 768px) 313px"
+                         src="https://i.imgur.com/Lru3xgc.jpg"
+                         media="(-webkit-min-device-pixel-ratio: 1.5)" class=" nh-cards_round-1">
+                  </picture>
+                </div>
+                <div class="nh-cards__info">
+                  <h4 class="nh-cards__title" style="color: #ffffff;text-align: center">Наследственное право</h4>
+                  <figcaption class="nh-cards__text" style="color: #ffffff;text-align: center">цена договорная</figcaption>
+                </div>
+              </figure>
+            </div>
+          </li>
+          <li class="lazyload nh-cards__item nh-cards_without-padding nh-cards_round-2" style="
+          --shadow-rgba-color: rgba(0,0,1, 1);
+          --border-color: rgba(0,0,0, 1); --border-width: 0px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-color: rgba(000  ,222,666, 1);">
+          <div>
+            <figure >
+              <div class="nh-cards__picture-container ">
+                <picture class="nh-cards__picture-container nh-cards_round-1 " style=" ">
+                  <source media="(max-width: 767px) " srcset="https://i.imgur.com/i4qNSrv.jpg" type="image/webp ">
+                  <source media="(max-width: 767px) " srcset="https://i.imgur.com/i4qNSrv.jpg" type="image/png ">
+                  <source media="(min-width: 768px) " srcset="https://i.imgur.com/i4qNSrv.jpg" type="image/webp ">
+                  <source media="(min-width: 768px) " srcset="https://i.imgur.com/i4qNSrv.jpg" type="image/png ">
+                  <img
+            alt="Третья категория "
+            sizes="(max-width: 767px) 288px, (min-width: 768px) 313px "
+            src="https://i.imgur.com/i4qNSrv.jpg"
+            media="(-webkit-min-device-pixel-ratio: 1.5) "
+            class=" nh-cards_round-1 "></picture></div><div class="nh-cards__info "><h4 class="nh-cards__title "
+													style=" color: #ffffff; text-align: center ">Жилищные вопросы
+												</h4><figcaption class="nh-cards__text "
+													style=" color: #ffffff; text-align: center ">цена договорная
+												</figcaption></div></figure></div></li><li class="lazyload nh-cards__item nh-cards_without-padding nh-cards_round-2 "
+
+
+
+           style="
+           --shadow-rgba-color: rgba(0,0,1, 1);
+           --border-color: rgba(0,0,0, 1);
+           --border-width: 0px;
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: auto;
+           background-color: rgba(111, 111, 111, 1); ">
+            <div>
+              <figure>
+                <div class="nh-cards__picture-container">
+                  <picture class="nh-cards__picture-container nh-cards_round-1" style="                                        ">
+                    <source media="(max-width: 767px)" srcset="https://i.imgur.com/CsS9EaM.jpg" type="image/webp">
+                    <source media="(max-width: 767px)" srcset="https://i.imgur.com/CsS9EaM.jpg" type="image/png">
+                    <source media="(min-width: 768px)" srcset="https://i.imgur.com/CsS9EaM.jpg" type="image/webp">
+                    <source media="(min-width: 768px)" srcset="https://i.imgur.com/CsS9EaM.jpg" type="image/png">
+                    <img alt="Четвёртая категория" sizes="(max-width: 767px) 288px, (min-width: 768px) 313px"
+                         src="https://i.imgur.com/CsS9EaM.jpg"
+                         media="(-webkit-min-device-pixel-ratio: 1.5)"
+                         class=" nh-cards_round-1"></picture>
+                </div>
+                <div class="nh-cards__info" id="sviaz">
+                  <h4 class="nh-cards__title" style="
+																											color: #ffffff;
+																																								text-align: center													">Арбитраж
+												</h4>
+                  <figcaption class="nh-cards__text" style="
+																											color: #ffffff;
+																																								text-align: center													">цена договорная
+                  </figcaption>
+                </div>
+              </figure>
+            </div>
+          </li>
+        </ul>
+      </div >
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<style>
+  import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600);
+@import url(http://weloveiconfonts.com/api/?family=brandico|entypo);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  padding-right: 10px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+  background: #;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#browser {
+  margin: 0px auto;
+  color: white;
+  width: 80%;
+
+
+}
+
+#browser-bar {
+  background: #394141;
+  width: 100%;
+  padding: 8px;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 0.9em;
+  position: relative;
+}
+#browser-bar p {
+  text-align: center;
+}
+#browser-bar .circles {
+  border-radius: 10px;
+  height: 13px;
+  width: 13px;
+  background: #ff3434;
+  float: left;
+  margin-left: 7px;
+  margin-top: 3px;
+}
+#browser-bar .circles:nth-of-type(2) {
+  background: #ffdd33;
+}
+#browser-bar .circles:nth-of-type(3) {
+  background: #67b678;
+}
+
+.arrow {
+  position: absolute;
+  right: 3px;
+  top: 6px;
+  font-size: 1.2em;
+  color: #8e9699;
+}
+
+#content {
+  background: #;
+}
+#content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#content #left {
+  float: left;
+  width: 75%;
+  background: #7BC087;
+}
+
+}
+#content #left ul#location-bar li:hover {
+  background: #4c8254;
+
+}
+@media screen and (max-width: 768px) {
+    #content {
+      flex-wrap: nowrap;
+    }
+
+    #left, #right {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+#content #right {
+  float: left;
+  width: 25%;
+  background: #454f4f;
+  font-size: 1.75em;
+  padding: 15px;
+}
+@media all and (max-width: 780px) {
+  #content #right {
+    width: 100%;
+  }
+}
+#content #right p {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#content #right a:hover {
+  color: #51B2D6;
+}
+#content #right #social {
+  display: table;
+  width: 100%;
+}
+#content #right .social {
+  display: table-cell;
+  text-align: center;
+}
+#content #right form {
+  border-top: solid thin #8e9699;
+  border-bottom: solid thin #8e9699;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+#content #right form input,
+#content #right form textarea {
+  background: #394141;
+  padding: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  color: white;
+}
+#content #right form input:last-of-type,
+#content #right form textarea:last-of-type {
+  margin-bottom: 10;
+}
+#content #right form input[type='submit'],
+#content #right form textarea[type='submit'] {
+  text-transform: uppercase;
+  background: #7BC087;
+  width: 100%;
+  color: white;
+  margin-top: 10px;
+}
+#content #right form input[type='submit']:hover,
+#content #right form textarea[type='submit']:hover {
+  background: #58b068;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+#content #right form input[type='textarea'],
+#content #right form textarea[type='textarea'] {
+  min-height: 75px;
+  vertical-align: text-top;
+}
+#content #right p.other {
+  font-size: 0.7;
+  margin-bottom: 5px;
+  text-transform: lowercase;
+  font-weight: 100;
+}
+#content #right p.other,
+#content #right p.other a {
+  color: #8e9699;
+}
+
+
+</style>
+
+
+<section class="lazyload" style="
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(49, 79, 159, 1);
+    background-image: url('https://i.imgur.com/ioujloG.jpg');
+">
+
+
+        <div style="max-width: 1600px; margin: 0 auto;  padding-top: 20px;  padding-bottom: 20px; ">
+<div id="browser">
+
+
+
+
+
+
+
+
+    <div id='content' style="background: rgba(69, 79, 79, 0.95); border-radius: 5%; background-color: ; overflow: hidden;">
+
+            <h2 class="text-center widget__title contacts__title" style="color: white">
+      <p>Контактная информация</p>
+      </h2>
+      <span class='arrow entypo-resize-full'></span>
+      <div class="nh-cards__items nh-cards_m nh-cards__items_1">
+          <li class="lazyload nh-cards__item nh-cards_without-padding nh-cards_round-2" style="
+
+          --shadow-rgba-color: rgba(0,1,1, 1);
+          --border-color: rgba(0,0,0, 1); --border-width: 1px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto;
+          border: 0;
+          box-shadow: 0 0px 0px var(--shadow-rgba-color,transparent);
+          background-color: rgba(111,111,1, 0);">
+            <div>
+              <style>
+  .nh-cards__picture-container1 img {
+    width: 500px; /* Установите желаемую ширину картинки */
+    height: auto; /* Установите "auto", чтобы пропорции картинки сохранялись */
+    margin-top: -15px;
+  }
+</style>
+              <figure >
+                <div class="nh-cards__info " style="padding: 24px 1.125rem;">
+                  <picture class="nh-cards__picture-container1 nh-cards_round-1 " style=" ">
+                    <source media="(max-width: 767px) " srcset="https://i.imgur.com/Vml1UPv.png" type="image/webp ">
+                    <source media="(max-width: 767px) " srcset="https://i.imgur.com/Vml1UPv.png" type="image/png ">
+                    <source media="(min-width: 768px) " srcset="https://i.imgur.com/Vml1UPv.png" type="image/webp ">
+                    <source media="(min-width: 768px) " srcset="https://i.imgur.com/Vml1UPv.png" type="image/png ">
+                    <img alt="Услуги адвоката"
+                     sizes="(max-width: 767px) 288px, (min-width: 768px) 313px "
+                     src="https://i.imgur.com/Vml1UPv.png"
+                     media="(-webkit-min-device-pixel-ratio: 1.5) "
+                     class=" nh-cards_round-1 ">
+                  </picture>
+                  </div>
+                <div class="nh-cards__info ">
+                  <h4 class="nh-cards__title "style=" color: #ffffff; text-align: center "><h3 style="color: white; padding: 0px 0rem; text-align: center ">Раззакова 49 </h3></h4>
+                  <figcaption class="nh-cards__text" style=" color: #ffffff; text-align: center "><h4>720040, Бишкек, Первомайский район<br> 1 этаж 1 кабинет</h4> </figcaption>
+                </div>
+
+
+
+              </figure>
+            </div>
+          </li>
+
+
+      <div id='left' style="background: #454f4f; width: 30%; flex: 0 0 60%; max-width: 60%;">
+        <li class="lazyload nh-cards__item nh-cards_without-padding nh-cards_round-2" style="
+        width: 100%; max-width: 100%;
+
+          --shadow-rgba-color: rgba(0,1,1, 1);
+          --border-color: rgba(0,0,0, 1); --border-width: 1px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-color: rgba(255,255,255, 0);">
+        <div style="  margin-top: 10px; width: 100%; height: 100%; overflow: hidden;">
+          <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+          <script charset="utf-8">
+            new DGWidgetLoader({
+              "width": 1000,
+              "height": 400,
+              "borderColor": "#a3a3a3",
+              "pos": {
+                "lat": 42.87455671749149,
+                "lon": 75.60498929023744,
+                "zoom": 16
+              },
+              "opt": {
+                "city": "bishkek"
+              },
+              "org": [{
+                "id": "70000001027034927"
+              }]
+            });
+          </script>
+          <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+        </div>
+        </li>
+      </div>
+      <div id='right' style="color: white; padding-left: 10px; width: 30%; flex: 0 0 40%; max-width: 40%; background: 0 ">
+        <form style="border-bottom: 1; border-radius: 5%">
+          <h4>Напишете нам</h4>
+          <input placeholder='Электронный адрес' type='email'>
+          <input placeholder='Имя' type='text'>
+          <input placeholder='Телефон' type='text'>
+          <textarea placeholder='Сообщение' rows='4'></textarea>
+          <input placeholder='Отправить'  type='submit'>
+        </form>
+        </div>
+        <style>
+  .h4-with-spaces {
+    letter-spacing: 0.5em; /* Измените значение, чтобы увеличить или уменьшить пробелы */
+  }
+</style>
+
+
+      <div style="padding-left: 15px; width: 43%;">
+                      <br>
+                    <div class="contact__label" style="color:white; display: flex; margin-left: 50px;">
+                      <p style="margin-right:70px;">Телефон</p>
+                      <div class="small-12 medium-6 large-12 contact__item" style="color: yellow">
+                        <a class="" href="tel:+996 500 202 263">+996 500 202 263</a>
+                        </div>
+                    </div>
+
+                      <br>
+                    <div class="contact__label" style="color:white; display: flex; margin-left: 50px;">
+                      <p style="margin-right: 45px;">Часы работы</p>
+                      <p style="margin-right: px;">c 9:00 до 18:00</p>
+                    </div>
+
+                      <br>
+                    <div class="contact__label" style="color:white; display: flex; margin-left: 50px;">
+                      <p style="margin-right: 55px;">Email</p>
+                      <div class="small-12 medium-6 large-12 contact__item" style="color: yellow">
+                        <a class="contacts-emails__link" href="mailto:partnertemplate@site.ru">adivsergroup@site.kg</a></div>
+                    </div>
+
+                      <br>
+                    <div class="contact__label" style="color:white; display: flex; margin-left: 50px;">
+                      <p style="margin-right: 110px;">WhatsApp</p>
+                      <div class="display-inline-block small-12 medium-6 large-12 contact__item" style="color: yellow">
+                        <a class="contacts-emails__link" href="https://wa.me/WhatsApp" target="_blank">WhatsApp</a>
+                      </div>
+                    </div>
+
+                      <br>
+                    <div class="contact__label" style="color:white; display: flex; margin-left: 50px;">
+                      <p style="margin-right: 185px;">Viber</p>
+                      <div class="display-inline-block small-12 medium-6 large-12 contact__item" style="color: yellow">
+                        <a class="contacts-emails__link" href="https://viber" target="_blank">Viber</a>
+                      </div>
+                    </div>
+
+                      <br>
+                    <div class="contact__label" style="color:white; display: flex; margin-left: 50px;">
+                      <p style="margin-right: 125px;">Telegram</p>
+                      <div class="display-inline-block small-12 medium-6 large-12 contact__item" style="color: yellow">
+                        <a class="contacts-emails__link" href="https://t.me/Telegram" target="_blank">Telegram</a>
+                    </div>
+
+
+      </div>
+
+        </div>
+<div class="widget__inner -relative">
+
+      <h2 class="text-center widget__title" style="color: white ">
+                Мы в социальных сетях
+            </h2>
+        <br>
+
+        <div data-ng-non-bindable class="content-block" id="contactssocnet-show">
+          <div class="socnets__list">
+            <div class="socnets__item socnets__item_vk">
+              <a target="_blank" class="socnets__icon" rel="nofollow" href="https://vk.com/1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" >
+                  <defs/>
+                  <path d="M28.9 24.68h-3.05c-1.16 0-1.52-.91-3.6-3.02-1.8-1.76-2.6-1.99-3.05-1.99-.63 0-.81.18-.81 1.04v2.76c0 .74-.23 1.19-2.2 1.19-3.23 0-6.83-1.96-9.35-5.61C3.04 13.7 2 9.69 2 8.86 2 8.42 2.18 8 3.03 8H6.1c.78 0 1.07.36 1.37 1.18 1.52 4.37 4.04 8.2 5.08 8.2.38 0 .56-.18.56-1.15V11.7c-.12-2.08-1.21-2.26-1.21-3 0-.35.3-.71.77-.71h4.8c.66 0 .9.36.9 1.12v6.1c0 .65.3.88.47.88.39 0 .71-.23 1.43-.94 2.2-2.47 3.77-6.27 3.77-6.27.2-.45.56-.86 1.34-.86h3.06c.91 0 1.12.47.91 1.13-.38 1.78-4.13 7.06-4.13 7.06-.32.54-.44.77 0 1.37.33.44 1.4 1.37 2.11 2.2 1.31 1.48 2.32 2.73 2.59 3.59.3.86-.15 1.3-1.01 1.3z" />
+                </svg>
+              </a>
+            </div>
+            <div class="socnets__item socnets__item_youtube">
+              <a target="_blank" class="socnets__icon" rel="nofollow" href="https://youtube.com/">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+                  <defs/>
+                  <path d="M30 15.91v-.23l-.02-.85a47.1 47.1 0 00-.14-2.55 16.7 16.7 0 00-.41-2.78 4.36 4.36 0 00-3.08-3.08 28 28 0 00-5.05-.47 147 147 0 00-3.64-.1H14.34a147 147 0 00-3.64.1c-2.44.1-4.17.24-5.05.47A4.35 4.35 0 002.57 9.5c-.19.7-.32 1.65-.41 2.78-.07.81-.12 1.68-.14 2.55l-.02.85v.64l.02.85c.02.87.07 1.74.14 2.55.09 1.13.23 2.07.42 2.78a4.35 4.35 0 003.07 3.08c.88.24 2.61.38 5.05.47 1.16.05 2.4.07 3.64.1H17.66c1.24-.02 2.48-.05 3.64-.1 2.44-.1 4.17-.24 5.05-.47a4.35 4.35 0 003.07-3.08c.2-.7.33-1.65.42-2.77.07-.82.12-1.7.14-2.56l.02-.85V15.91zm-2.25.16v.23l-.02.8a42.3 42.3 0 01-.13 2.43c-.08 1.01-.2 1.84-.35 2.39a2.1 2.1 0 01-1.48 1.48c-.66.18-2.31.32-4.56.4a141.62 141.62 0 01-4.76.1h-2.08c-1.22-.02-2.44-.05-3.58-.1-2.25-.08-3.9-.22-4.56-.4a2.1 2.1 0 01-1.48-1.48 14.9 14.9 0 01-.35-2.39c-.07-.77-.1-1.6-.13-2.43l-.02-.8v-.37-.23l.02-.8c.02-.83.06-1.66.13-2.43.08-1.01.2-1.84.35-2.39.2-.72.76-1.3 1.48-1.48.66-.18 2.31-.32 4.56-.4a142 142 0 014.76-.1h2.08c1.22.02 2.44.05 3.58.1 2.25.08 3.9.22 4.56.4.72.2 1.29.76 1.48 1.48.15.55.27 1.38.35 2.39.07.77.1 1.6.13 2.43l.02.8v.37zM13.22 20.2l7.25-4.22-7.25-4.16v8.38z" />
+                </svg>
+              </a>
+            </div>
+            <div class="socnets__item socnets__item_telegram">
+              <a target="_blank" class="socnets__icon" rel="nofollow" href="https://t.me/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                  <defs/>
+                  <path fill="currentColor" d="M28.93 6.98L25 25.48c-.3 1.31-1.07 1.64-2.16 1.02l-5.98-4.4-2.89 2.77c-.32.32-.58.59-1.2.59l.43-6.09L24.28 9.36c.48-.43-.1-.67-.75-.24l-13.7 8.63-5.9-1.85c-1.27-.4-1.3-1.28.28-1.9l23.06-8.88c1.07-.4 2 .23 1.66 1.87z" />
+                </svg>
+              </a>
+            </div>
+            <div class="socnets__item socnets__item_odnkl">
+              <a target="_blank" class="socnets__icon" rel="nofollow" href="https://ok.ru/">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+                  <defs/>
+                  <path fill-rule="evenodd" d="M10.13 10.06a6.06 6.06 0 005.98 6.09 6.05 6.05 0 006.07-6 6.06 6.06 0 00-6-6.15 6.06 6.06 0 00-6.05 6.06zm8.75-1.13c.15.36.23.75.22 1.14a2.94 2.94 0 01-5.03 2.12 2.95 2.95 0 01-.87-2.09 2.95 2.95 0 015.68-1.17z" clip-rule="evenodd" />
+                  <path d="M10.04 19.13a9.21 9.21 0 004.94 1.77l-.12.14-.18.2-1.22 1.22-2.85 2.88c-.28.28-.48.6-.5 1-.03.61.35 1.22.93 1.5.56.28 1.13.2 1.6-.28 1.07-1.06 2.13-2.12 3.17-3.2.26-.27.4-.33.7-.02a117.55 117.55 0 003.1 3.15c.28.27.58.47.97.5.62.04 1.24-.36 1.53-.96.25-.56.16-1.14-.31-1.62l-2.64-2.66-1.48-1.5-.24-.26-.08-.09c1.01-.12 2.03-.3 2.96-.67a7.23 7.23 0 002.62-1.7c.48-.5.48-1.12.1-1.76-.35-.56-.94-.8-1.58-.63-.33.08-.61.25-.88.45a8.05 8.05 0 01-8.97-.08c-.13-.09-.27-.17-.41-.24-.74-.35-1.45-.19-1.87.42-.5.71-.43 1.4.2 2 .12.13.26.25.4.36l.11.08z" />
+                </svg>
+              </a>
+            </div>
+            <div class="socnets__item socnets__item_zen">
+              <a target="_blank" class="socnets__icon" rel="nofollow" href="https://zen.yandex.ru/">
+                <svg viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 15a13 13 0 0126 0 13 13 0 01-26 0z" fill="#000" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.74 2c-.06 5.35-.41 8.34-2.4 10.33-2 2-5 2.35-10.34 2.4v.78c5.35.06 8.34.41 10.33 2.4 1.96 1.97 2.33 4.9 2.4 10.09h.79c.07-5.2.44-8.12 2.4-10.08 1.96-1.96 4.89-2.33 10.08-2.4v-.79c-5.2-.07-8.12-.44-10.08-2.4-2-1.99-2.35-4.98-2.4-10.33h-.78z" fill="#fff" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+</section>
+
+
+
+<section id="contactssocnet" data-widget-container data-widget-id="22" data-region="1" data-widget-type="26" data-widget-url="/widget?route=mainPage&amp;on_main=1&amp;type=26&amp;widget_id=22" data-block-id="22" class="block-22 widget-sort socnets -nt-widget on-view widget-block
+         nh-editor-panel socnets_light lazyload" style="
+                            background-position: top left;
+                background-repeat: no-repeat;
+                background-size: auto;
+                                        background-color: #DCE;
+            ">
+
+  <div class="widget">
+    <div class="widget__content widget__content_filled" style="background-image: url('https://i.imgur.com/ioujloG.jpg'); background-size: cover; background-position: top; position: relative; z-index: 999;">
+      <div class="widget__inner -relative">
+
+      <h2 class="text-center widget__title" style="color: white ">
+                Мы в социальных сетях
+            </h2>
+        <br>
+
+        <div data-ng-non-bindable class="content-block" id="contactssocnet-show">
+          <div class="socnets__list">
+            <div class="socnets__item socnets__item_vk">
+              <a target="_blank" class="socnets__icon" rel="nofollow" href="https://vk.com/1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" >
+                  <defs/>
+                  <path d="M28.9 24.68h-3.05c-1.16 0-1.52-.91-3.6-3.02-1.8-1.76-2.6-1.99-3.05-1.99-.63 0-.81.18-.81 1.04v2.76c0 .74-.23 1.19-2.2 1.19-3.23 0-6.83-1.96-9.35-5.61C3.04 13.7 2 9.69 2 8.86 2 8.42 2.18 8 3.03 8H6.1c.78 0 1.07.36 1.37 1.18 1.52 4.37 4.04 8.2 5.08 8.2.38 0 .56-.18.56-1.15V11.7c-.12-2.08-1.21-2.26-1.21-3 0-.35.3-.71.77-.71h4.8c.66 0 .9.36.9 1.12v6.1c0 .65.3.88.47.88.39 0 .71-.23 1.43-.94 2.2-2.47 3.77-6.27 3.77-6.27.2-.45.56-.86 1.34-.86h3.06c.91 0 1.12.47.91 1.13-.38 1.78-4.13 7.06-4.13 7.06-.32.54-.44.77 0 1.37.33.44 1.4 1.37 2.11 2.2 1.31 1.48 2.32 2.73 2.59 3.59.3.86-.15 1.3-1.01 1.3z" />
+                </svg>
+              </a>
+            </div>
+            <div class="socnets__item socnets__item_youtube">
+              <a target="_blank" class="socnets__icon" rel="nofollow" href="https://youtube.com/">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+                  <defs/>
+                  <path d="M30 15.91v-.23l-.02-.85a47.1 47.1 0 00-.14-2.55 16.7 16.7 0 00-.41-2.78 4.36 4.36 0 00-3.08-3.08 28 28 0 00-5.05-.47 147 147 0 00-3.64-.1H14.34a147 147 0 00-3.64.1c-2.44.1-4.17.24-5.05.47A4.35 4.35 0 002.57 9.5c-.19.7-.32 1.65-.41 2.78-.07.81-.12 1.68-.14 2.55l-.02.85v.64l.02.85c.02.87.07 1.74.14 2.55.09 1.13.23 2.07.42 2.78a4.35 4.35 0 003.07 3.08c.88.24 2.61.38 5.05.47 1.16.05 2.4.07 3.64.1H17.66c1.24-.02 2.48-.05 3.64-.1 2.44-.1 4.17-.24 5.05-.47a4.35 4.35 0 003.07-3.08c.2-.7.33-1.65.42-2.77.07-.82.12-1.7.14-2.56l.02-.85V15.91zm-2.25.16v.23l-.02.8a42.3 42.3 0 01-.13 2.43c-.08 1.01-.2 1.84-.35 2.39a2.1 2.1 0 01-1.48 1.48c-.66.18-2.31.32-4.56.4a141.62 141.62 0 01-4.76.1h-2.08c-1.22-.02-2.44-.05-3.58-.1-2.25-.08-3.9-.22-4.56-.4a2.1 2.1 0 01-1.48-1.48 14.9 14.9 0 01-.35-2.39c-.07-.77-.1-1.6-.13-2.43l-.02-.8v-.37-.23l.02-.8c.02-.83.06-1.66.13-2.43.08-1.01.2-1.84.35-2.39.2-.72.76-1.3 1.48-1.48.66-.18 2.31-.32 4.56-.4a142 142 0 014.76-.1h2.08c1.22.02 2.44.05 3.58.1 2.25.08 3.9.22 4.56.4.72.2 1.29.76 1.48 1.48.15.55.27 1.38.35 2.39.07.77.1 1.6.13 2.43l.02.8v.37zM13.22 20.2l7.25-4.22-7.25-4.16v8.38z" />
+                </svg>
+              </a>
+            </div>
+            <div class="socnets__item socnets__item_telegram">
+              <a target="_blank" class="socnets__icon" rel="nofollow" href="https://t.me/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                  <defs/>
+                  <path fill="currentColor" d="M28.93 6.98L25 25.48c-.3 1.31-1.07 1.64-2.16 1.02l-5.98-4.4-2.89 2.77c-.32.32-.58.59-1.2.59l.43-6.09L24.28 9.36c.48-.43-.1-.67-.75-.24l-13.7 8.63-5.9-1.85c-1.27-.4-1.3-1.28.28-1.9l23.06-8.88c1.07-.4 2 .23 1.66 1.87z" />
+                </svg>
+              </a>
+            </div>
+            <div class="socnets__item socnets__item_odnkl">
+              <a target="_blank" class="socnets__icon" rel="nofollow" href="https://ok.ru/">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+                  <defs/>
+                  <path fill-rule="evenodd" d="M10.13 10.06a6.06 6.06 0 005.98 6.09 6.05 6.05 0 006.07-6 6.06 6.06 0 00-6-6.15 6.06 6.06 0 00-6.05 6.06zm8.75-1.13c.15.36.23.75.22 1.14a2.94 2.94 0 01-5.03 2.12 2.95 2.95 0 01-.87-2.09 2.95 2.95 0 015.68-1.17z" clip-rule="evenodd" />
+                  <path d="M10.04 19.13a9.21 9.21 0 004.94 1.77l-.12.14-.18.2-1.22 1.22-2.85 2.88c-.28.28-.48.6-.5 1-.03.61.35 1.22.93 1.5.56.28 1.13.2 1.6-.28 1.07-1.06 2.13-2.12 3.17-3.2.26-.27.4-.33.7-.02a117.55 117.55 0 003.1 3.15c.28.27.58.47.97.5.62.04 1.24-.36 1.53-.96.25-.56.16-1.14-.31-1.62l-2.64-2.66-1.48-1.5-.24-.26-.08-.09c1.01-.12 2.03-.3 2.96-.67a7.23 7.23 0 002.62-1.7c.48-.5.48-1.12.1-1.76-.35-.56-.94-.8-1.58-.63-.33.08-.61.25-.88.45a8.05 8.05 0 01-8.97-.08c-.13-.09-.27-.17-.41-.24-.74-.35-1.45-.19-1.87.42-.5.71-.43 1.4.2 2 .12.13.26.25.4.36l.11.08z" />
+                </svg>
+              </a>
+            </div>
+            <div class="socnets__item socnets__item_zen">
+              <a target="_blank" class="socnets__icon" rel="nofollow" href="https://zen.yandex.ru/">
+                <svg viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 15a13 13 0 0126 0 13 13 0 01-26 0z" fill="#000" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.74 2c-.06 5.35-.41 8.34-2.4 10.33-2 2-5 2.35-10.34 2.4v.78c5.35.06 8.34.41 10.33 2.4 1.96 1.97 2.33 4.9 2.4 10.09h.79c.07-5.2.44-8.12 2.4-10.08 1.96-1.96 4.89-2.33 10.08-2.4v-.79c-5.2-.07-8.12-.44-10.08-2.4-2-1.99-2.35-4.98-2.4-10.33h-.78z" fill="#fff" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section data-widget-container data-widget-id="23" data-widget-name="footer-columns" data-widget-type="98" data-widget-url="/widget?route=mainPage&amp;on_main=1&amp;type=98&amp;widget_id=23&route=widget" id="footer-columns-23" class="nh-footer-columns  widget-sort
+         onmain on-view widget-block nh-editor-panel lazyload  js-indent">
+  <link href="//s.siteapi.org/frontend/static/grid_12/css/footer-columns.24c50b.min.css" rel="stylesheet" type="text/css" />
+  <div data-widget-replaceable-content="23" data-ng-non-bindable class="nh-footer-columns__wrapper lazyload nh-footer-columns--indent-top-m nh-footer-columns--indent-bottom-m" style="
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(17,21,28, 1);" >
+
+    <div class="js-indent-add" ></div>
+    <div class="nh-footer-columns__inner nh-footer-columns__container" style="grid-template-columns: repeat( 4, 1fr);" >
+      <div class="nh-footer-columns__column" >
+        <div class="nh-footer-columns__section nh-footer-columns__section--align-left" style="--title-color: #FFFFFF;" >
+          <div class="nh-footer-columns__title-container" >
+            <div class="nh-footer-columns__section-title" style="--title-color: #FFFFFF;">
+              О компании
+            </div>
+            <div class="nh-footer-columns__title-svg" style="--title-color: #FFFFFF;"></div>
+          </div>
+          <ul class="nh-footer-columns__links-list">
+            <li class="nh-footer-columns__links-item"><a class="nh-footer-columns__link nh-footer-columns__link--underline" href="" target="_parent" style="--item-color: #B2BCC3; --item-hover: #0CF574;">
+                                        О нас
+                                    </a>
+            <a class="nh-footer-columns__link nh-footer-columns__link--underline" href="" target="_parent" style="--item-color: #B2BCC3; --item-hover: #0CF574;">
+                                        Контакты
+                                    </a>
+              <a class="nh-footer-columns__link nh-footer-columns__link--underline" href="" target="_parent" style="--item-color: #B2BCC3; --item-hover: #0CF574;">
+                                        Услуги
+                                    </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+          </div>
+          <div id="for-explain"></div>
+          <input type="hidden" class="-currentFont" value="Montserrat">
+          <script src="/js/lang/ru_RU/translate.js?v=8450396804356098204101"></script>
+          <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
+          <script src="//s.siteapi.org/frontend/static/grid_12/js/vendor-3a5091a4e8.min.js" id="js/vendor.min.js" type="text/javascript"></script>
+          <script src="//s.siteapi.org/frontend/static/grid_12/js/scripts-032125abc1.js" id="js/scripts.js" type="text/javascript"></script>
+          <div id="vk_api_transport"></div>
+          <script>
+          $(document).ready(function() {
+            //Inspired by a dribbble by Bluroon
+            //https://dribbble.com/shots/1356864-Contact-Us
+
+            //Capture the click event on a location
+            $("#location-bar a").click(function(event){
+              event.preventDefault();
+
+              var $this = $(this),
+                  $li = $this.parent(),
+                  selectedMap = $this.attr("href"),
+                  selectedLocation = $this.data('location');
+
+              $li.addClass('active').siblings('li').removeClass('active');
+
+              //Update #map bkimage with the image from the location
+              $('#map').css('background-image', 'url(' + selectedMap + ')');
+              //update tooltip 'address'
+              $('.selectedLocation').text(selectedLocation);
+            });
+          });
+          </script>
+
+
+
+
+<div >
+
+</div>
+
+
+
+
+</body>
+
+
+</html>
